@@ -4,4 +4,5 @@ GARBAGE_PATTERNS := *.in *.out e E
 GARBAGE := $(foreach DIR,$(DIRS),$(addprefix $(DIR)/,$(GARBAGE_PATTERNS)))
 
 clean:
+	@echo "clean ... "
 	@rm -rf $(GARBAGE)
