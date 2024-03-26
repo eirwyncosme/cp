@@ -1,4 +1,3 @@
-/* Presentation error */
 #include <vector>
 #include <string>
 #include <iostream>
@@ -39,5 +38,8 @@ int main(void)
 		}
 	}
 
-	cout << ans << '\n';
+	for (int i = 1; i < ans.length() + 1; i++) {
+		cout << ans[i - 1];
+		if (i && i % 80 == 0) cout << '\n';
+	}
 }
