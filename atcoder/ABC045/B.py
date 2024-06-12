@@ -1,12 +1,12 @@
-decks = [input(), input(), input()]
-poss = [0] * 3
-current = 0
+S = [input(), input(), input()]
 
+p = 'a'
 while True:
-    poss[current] += 1
-    if poss[current] == len(decks[current]):
-        print(chr(current + ord('A')))
-        break
+    i = ord(p) - ord('a')
+    if S[i] == "": break
 
-    current = ord(decks[current][poss[current]]) - ord('a')
-    print(poss, current)
+    p = S[i][0]
+    S[i] = S[i][1:]
+
+
+print(p.upper())
