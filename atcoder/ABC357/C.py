@@ -1,9 +1,7 @@
 # Editorial
 
 import typing
-import functools
 
-@functools.cache
 def f(N: int) -> list[list[str]]:
     if N == 0: return [["#"]]
     sub = f(N - 1)
